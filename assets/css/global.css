@@ -365,28 +365,6 @@ p:last-child { margin-bottom: 0; }
   display: block;
 }
 
-.slideshow__dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 2;
-}
-
-.slideshow__dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: rgba(255,255,255,0.45);
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: background-color 0.3s ease;
-}
-
-.slideshow__dot.is-active { background-color: var(--color-white); }
 
 /* ----------------------------------------------------------
    Home headline (below slideshow)

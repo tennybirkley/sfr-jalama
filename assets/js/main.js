@@ -13,31 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Slideshow
   const slides = document.querySelectorAll('.slideshow__slide');
-  const dots   = document.querySelectorAll('.slideshow__dot');
 
   if (slides.length > 1) {
     let current = 0;
 
-    function goTo(index) {
-      slides[current].classList.remove('is-active');
-      dots[current].classList.remove('is-active');
-      current = index;
-      slides[current].classList.add('is-active');
-      dots[current].classList.add('is-active');
-    }
-
-    // Dot click navigation
-    dots.forEach((dot, i) => dot.addEventListener('click', () => {
-      clearInterval(timer);
-      goTo(i);
-      timer = setInterval(advance, 4500);
-    }));
-
     function advance() {
-      goTo((current + 1) % slides.length);
+      slides[current].classList.remove('is-active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('is-active');
     }
 
-    let timer = setInterval(advance, 4500);
+    setInterval(advance, 4500);
   }
 
 });
