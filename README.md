@@ -53,8 +53,11 @@ Drop images into `assets/images/`. File names expected by the pages:
 
 ## Inquiry form
 
-The form on `inquiry.html` uses Netlify Forms (`netlify` attribute). It will route submissions to howdy@sfrjalama.com once configured in the Netlify dashboard under Forms > Notifications.
+The form on `inquiry.html` uses Formspree. To activate:
+1. Go to formspree.io and create a new form pointed at howdy@sfrjalama.com
+2. Copy the form ID
+3. Replace `YOUR_FORM_ID` in `pages/inquiry.html` with the real ID
 
 ## Deploy
 
-Push to GitHub. Connect repo to Netlify. Point `sfrjalama.com` DNS to Netlify after client review.
+Hosted on Vercel (connected to github.com/tennybirkley/sfr-jalama). Pushes to `main` deploy automatically. Point `sfrjalama.com` DNS to Vercel after client review.
