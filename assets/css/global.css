@@ -157,10 +157,10 @@ p:last-child { margin-bottom: 0; }
 
 .nav-logo {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 400;
   color: var(--color-text);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
 .nav-links {
