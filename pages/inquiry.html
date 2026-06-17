@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inquire — SFR Jalama</title>
+  <meta name="description" content="Send an inquiry to SFR Jalama for stays, events, or photography sessions.">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <style>
+    .inquiry-form {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+    }
+    .form-group label .req {
+      color: var(--color-accent);
+      margin-left: 2px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-white);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--color-accent);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+    .form-submit {
+      margin-top: 8px;
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">SFR Jalama</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/stays.html">Stays</a>
+        <a href="/pages/events.html">Events</a>
+        <a href="/pages/photography.html">Photography</a>
+        <a href="/pages/gallery.html">Gallery</a>
+        <a href="/pages/contact.html">Contact</a>
+        <a href="/pages/inquiry.html" class="nav-cta">Inquire</a>
+      </nav>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile">
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/stays.html">Stays</a>
+      <a href="/pages/events.html">Events</a>
+      <a href="/pages/photography.html">Photography</a>
+      <a href="/pages/gallery.html">Gallery</a>
+      <a href="/pages/contact.html">Contact</a>
+      <a href="/pages/inquiry.html" class="nav-cta">Inquire</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="page-hero">
+      <h1>Get in Touch</h1>
+      <p>Tell us what you're dreaming up.</p>
+    </div>
+
+    <section class="section">
+      <form class="inquiry-form"
+            method="POST"
+            action="/pages/thank-you.html"
+            netlify
+            netlify-honeypot="bot-field"
+            name="inquiry">
+
+        <input type="hidden" name="form-name" value="inquiry">
+        <p style="display:none;">
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name <span class="req">*</span></label>
+            <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name <span class="req">*</span></label>
+            <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" required placeholder="Tell us about you and what you are interested in."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="referral">How did you find us?</label>
+          <select id="referral" name="referral">
+            <option value="" disabled selected>Select an option</option>
+            <option value="instagram">Instagram</option>
+            <option value="google">Google</option>
+            <option value="word-of-mouth">Word of mouth</option>
+            <option value="returning">Returning guest</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn--primary">Send Inquiry</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">SFR Jalama</div>
+        <p>A working ranch in Southern California open for stays, events, and photography.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/stays.html">Stays</a></li>
+          <li><a href="/pages/events.html">Events</a></li>
+          <li><a href="/pages/photography.html">Photography</a></li>
+          <li><a href="/pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <a href="mailto:howdy@sfrjalama.com">howdy@sfrjalama.com</a>
+        <a href="https://instagram.com/Sfr_jalama" target="_blank" rel="noopener">@Sfr_jalama</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 SFR Jalama. All rights reserved.</div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

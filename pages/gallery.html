@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — SFR Jalama</title>
+  <meta name="description" content="Photos from SFR Jalama — a Southern California ranch for stays, events, and photography.">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <style>
+    .gallery-grid {
+      columns: 3;
+      column-gap: 12px;
+      padding: 48px var(--gutter);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .gallery-grid img {
+      width: 100%;
+      margin-bottom: 12px;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .gallery-grid { columns: 1; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .gallery-grid { columns: 2; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">SFR Jalama</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/stays.html">Stays</a>
+        <a href="/pages/events.html">Events</a>
+        <a href="/pages/photography.html">Photography</a>
+        <a href="/pages/gallery.html">Gallery</a>
+        <a href="/pages/contact.html">Contact</a>
+        <a href="/pages/inquiry.html" class="nav-cta">Inquire</a>
+      </nav>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile">
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/stays.html">Stays</a>
+      <a href="/pages/events.html">Events</a>
+      <a href="/pages/photography.html">Photography</a>
+      <a href="/pages/gallery.html">Gallery</a>
+      <a href="/pages/contact.html">Contact</a>
+      <a href="/pages/inquiry.html" class="nav-cta">Inquire</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="page-hero">
+      <h1>Gallery</h1>
+    </div>
+
+    <!-- Add photos to /assets/images/ and list them here -->
+    <div class="gallery-grid">
+      <img src="/assets/images/gallery-01.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-02.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-03.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-04.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-05.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-06.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-07.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-08.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-09.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-10.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-11.jpg" alt="SFR Jalama">
+      <img src="/assets/images/gallery-12.jpg" alt="SFR Jalama">
+    </div>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">SFR Jalama</div>
+        <p>A working ranch in Southern California open for stays, events, and photography.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/stays.html">Stays</a></li>
+          <li><a href="/pages/events.html">Events</a></li>
+          <li><a href="/pages/photography.html">Photography</a></li>
+          <li><a href="/pages/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <a href="mailto:howdy@sfrjalama.com">howdy@sfrjalama.com</a>
+        <a href="https://instagram.com/Sfr_jalama" target="_blank" rel="noopener">@Sfr_jalama</a>
+        <a href="/pages/inquiry.html" class="btn btn--primary" style="margin-top: 16px; font-size: 0.75rem;">Send an Inquiry</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 SFR Jalama. All rights reserved.</div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
