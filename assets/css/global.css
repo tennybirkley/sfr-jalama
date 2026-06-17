@@ -461,6 +461,22 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ----------------------------------------------------------
+   Image Fallbacks (shows styled background when src is missing)
+   ---------------------------------------------------------- */
+img {
+  background-color: var(--color-bg-secondary);
+}
+
+.hero__bg {
+  background: linear-gradient(160deg, #C9BAA5 0%, #A08060 100%);
+}
+
+.card__image-wrap img {
+  background: linear-gradient(160deg, #C9BAA5 0%, #A08060 100%);
+  min-height: 220px;
+}
+
+/* ----------------------------------------------------------
    Dividers
    ---------------------------------------------------------- */
 .divider {
