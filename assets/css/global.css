@@ -188,6 +188,14 @@ p:last-child { margin-bottom: 0; }
 }
 .nav-links a.nav-cta:hover { background-color: var(--color-accent-hover); }
 
+.nav-links a.nav-instagram {
+  display: flex;
+  align-items: center;
+  color: var(--color-accent);
+  padding: 0;
+}
+.nav-links a.nav-instagram:hover { color: var(--color-accent-hover); }
+
 /* Mobile nav */
 .nav-hamburger {
   display: none;
