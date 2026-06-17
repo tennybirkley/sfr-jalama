@@ -2,13 +2,7 @@
    SFR Jalama — Global Stylesheet
    ============================================================ */
 
-/* ----------------------------------------------------------------
-   Fonts: Canela (headings) + Aktiv Grotesk (body)
-   Load via Adobe Fonts — add the kit <link> tag to each HTML <head>
-   before this stylesheet, or self-host files in /assets/fonts/.
-   Example Adobe Fonts embed:
-   <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css">
-   ---------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /* ----------------------------------------------------------
    CSS Custom Properties
@@ -24,8 +18,8 @@
   --color-white:          #FFFFFF;
   --color-overlay:        rgba(30, 18, 8, 0.45);
 
-  --font-heading: 'canela', Georgia, serif;
-  --font-body:    'aktiv-grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', 'Helvetica Neue', Arial, sans-serif;
 
   --nav-height: 72px;
   --max-width:  1200px;
